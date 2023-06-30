@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Details</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <style>
+        body{
+  background: linear-gradient(109.6deg, rgb(20, 30, 48) 11.2%, rgb(36, 59, 85) 91.1%);
+  margin-top:20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.card {
+    border-radius: 10px;
+    background-color: #f9d29d;
+background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%);
+}
+.main-head {
+    color: #924613;
+    font-size: 2.5rem;
+    font-family: 'French Script MT', cursive;
+}
+.nav-switch {
+    background-color: #f1dfd1;
+background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+}
+    </style>
+ 
+<!-- ... previous code ... -->
+
+<div class="container">
+    <div class="nav bg-primary rounded-pill p-2 position-relative" style="height: 120px; top: -3px; left: -3px;">
+        <ul class="nav nav-switch nav-pills p-3 bg-white mb-3 rounded-pill align-items-center" style="height: 105px; width: 1100px;">
+            <li class="nav-item">
+              <span class="main-head nav-link rounded-pill d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2" id="site-name">
+                ソCipher~Chat么
+              </span>
+            </li>
+            <li class="nav-item ml-auto">
+              <a href="/admin" class="nav-col nav-link rounded-pill d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2 btn btn-primary btn-pill" id="log-in">
+                HOME
+              </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-col nav-link rounded-pill d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2 btn btn-primary btn-pill" id="sign-up">
+                [SIGN UP]
+              </a>
+            </li> -->
+          </ul>
+  </div>
+
+  <div style="height: 20px;"></div>
+
+    <div class="row" id="cardRow">
+      <!-- Card 1 -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">User 1</h5>
+            <p class="card-text username">Username</p>
+            <p class="card-text fname">First Name: </p>
+            <p class="card-text lname">Last name: </p>
+            <p class="card-text Email">Email: </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">User 2</h5>
+            <p class="card-text username">Username</p>
+            <p class="card-text fname">First Name: </p>
+            <p class="card-text lname">Last name: </p>
+            <p class="card-text Email">Email: </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary mt-4" id="addCardBtn">Add Card</button>
+  </div>
+  
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      var cardCounter = 2; // Starting counter for dynamically added cards
+  
+      // Function to add a new card
+      function addCard() {
+        var newCard =
+          '<div class="col-md-6">' +
+          '  <div class="card">' +
+          '    <div class="card-body">' +
+          '      <h5 class="card-title">User ' + (cardCounter + 1) + '</h5>' +
+          '      <p class="card-text">User details go here...</p>' +
+          '    </div>' +
+          '  </div>' +
+          '</div>';
+  
+        $('#cardRow').append(newCard);
+        cardCounter++;
+      }
+  
+      // Event handler for the "Add Card" button
+      $('#addCardBtn').click(function() {
+        addCard();
+      });
+    });
+  </script>
+  
+  <!-- Include Bootstrap JS -->
+</body>
+</html>
