@@ -19,10 +19,11 @@ router.post('/', checkNotAuthenticated, passport.authenticate('local', {
 }));
 
 function checkNotAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return res.redirect('/');
+    if (req.isAuthenticated() && req.originalUrl !== '/admin/login') {
+      return res.redirect('/');
+    }
+    next();
   }
-  next();
-}
+  
 
 module.exports = router;

@@ -12,9 +12,11 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 
 
+const homeRoutes = require('./routes/home');
 const indexRoutes = require('./routes/index');
 const loginRoutes = require('./routes/login');
 const signupRoutes = require('./routes/signup');
+const loginAARoutes = require('./routes/loginAA');
 
 
 app.set('view engine', 'ejs')
@@ -38,8 +40,10 @@ db.once('open', () => console.log('connected to mongoose'))
 
 // Use the routes
 app.use('/', indexRoutes);
+app.use('/home', homeRoutes);
 app.use('/login', loginRoutes);
 app.use('/signup', signupRoutes);
+app.use('/loginAA', loginAARoutes);
 
 
 app.listen(process.env.PORT ||7000, () => console.log("server connected to 7000"))
