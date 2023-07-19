@@ -11,4 +11,5 @@ Open Source: This repository is open source, meaning that developers can contrib
 We encourage developers, security enthusiasts, and anyone passionate about messaging platforms to explore, contribute, and collaborate with us on the CipherChat project. Your input and contributions are highly valued as we strive to improve the security, functionality, and user experience of our platform.
 
 Get involved today by forking this repository, submitting bug reports or feature requests, or even creating pull requests to implement new ideas. Together, let's build a vibrant and secure community where random notes can be shared with confidence. Happy messaging!
+
 ![Cipher chat](public/images/readImage.png)
